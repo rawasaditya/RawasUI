@@ -1,0 +1,20 @@
+$colors: (
+  primary: #975aff,
+  secondary: #616d89,
+  success: #40c057,
+  info: #2f8be6,
+  warning: #f77e17,
+  danger: #f55252,
+  light: #dbdee5,
+  dark: #1a051d,
+);
+
+$transition: 100ms;
+
+$radius: (
+  sm:0.25rem,
+  md:0.35rem,
+  lg:0.6rem,
+  circle:50%,
+  pill:50rem,
+  0:0)
