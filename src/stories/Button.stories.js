@@ -25,38 +25,49 @@ export default {
         'light',
         'dark'
       ],
-      control: { type: 'select', default: 'megenta' },
+      control: { type: 'select', defaultValue: 'megenta' },
+    },
+    variant:{
+      options: [
+        'contain',
+        'text',
+        'outline',
+      ],
+      control: { type: 'select', defaultValue: 'contained' },
     },
     className: {
       type: "string"
     },
+    rounded:{
+      type:"boolean",
+    }
   },
 };
 
 export const Primary = {
   args: {
-    child: 'Button',
+    children: 'Button',
     color: "primary"
   },
 };
 
 export const Secondary = {
   args: {
-    child: 'Button',
+    children: 'Button',
     color: "secondary"
   },
 };
 
 export const Success = {
   args: {
-    child: 'Button',
+    children: 'Button',
     color: "success"
   },
 };
 
 export const Info = {
   args: {
-    child: 'Button',
+    children: 'Button',
     color: "info"
   },
 };
@@ -64,7 +75,7 @@ export const Info = {
 
 export const Warning = {
   args: {
-    child: 'Button',
+    children: 'Button',
     color: "warning"
   },
 };
@@ -72,21 +83,21 @@ export const Warning = {
 
 export const Danger = {
   args: {
-    child: 'Button',
+    children: 'Button',
     color: "danger"
   },
 };
 
 export const Light = {
   args: {
-    child: 'Button',
+    children: 'Button',
     color: "light"
   },
 };
 
 export const Dark = {
   args: {
-    child: 'Button',
+    children: 'Button',
     color: "dark"
   },
 };

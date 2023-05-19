@@ -1,15 +1,16 @@
 {
   "name": "rawasui",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "projectPath": "E:/Side/sideProjects/test",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "sass": "sass --watch src/scss:src/public/stylesheets",
-    "build": "rollup -c"
+    "build": "rollup -c && node ./copyPackage.js"
   },
   "repository": {
     "type": "git",
@@ -48,6 +49,8 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
+    "@rollup/plugin-sucrase": "^5.0.1",
+    "rollup-plugin-generate-package-json": "^3.2.0",
     "rollup-plugin-import-css": "^3.2.1"
   }
 }
