@@ -10,7 +10,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "sass": "sass --watch src/scss:src/public/stylesheets",
-    "build": "rollup -c && node ./copyPackage.js"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "@rollup/plugin-sucrase": "^5.0.1",
+    "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-generate-package-json": "^3.2.0",
     "rollup-plugin-import-css": "^3.2.1"
   }

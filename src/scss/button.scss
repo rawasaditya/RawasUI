@@ -7,7 +7,9 @@
 }
 
 .btn {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 400;
   color: #342e49;
   text-align: center;
@@ -16,12 +18,13 @@
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: 0.3rem 1.2rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
   line-height: 1.5rem;
   border-radius: 0.35rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  min-width: 7rem;
 }
 
 @each $name,
@@ -31,48 +34,58 @@ $color in $colors {
     border-color: $color;
     color: #FFF;
 
-    &:hover {
-      background-color: lighten($color, $amount: 10);
-      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.28);
-      border-color: lighten($color, $amount: 10);
+    &:active:enabled {
+      transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(0.95) scaleY(0.95)
     }
 
-    &:active {
-      background-color: lighten($color, $amount: 10);
+    &:disabled {
+      background-color: lighten($color, $amount: 5);
     }
+
   }
-
 
   .btn-outline-#{"" + $name} {
     color: $color;
     border-color: $color;
+    font-weight: bold;
 
-    &:hover {
+
+    &:hover:enabled {
       background-color: lighten($color, $amount: 10);
       box-shadow: 0 2px 7px rgba(0, 0, 0, 0.28);
       border-color: lighten($color, $amount: 10);
       color: #FFF;
-
     }
 
-    &:active {
-      background-color: $color;
+    &:disabled {
+      border-color: lighten($color, $amount: 10);
+      color: lighten($color, $amount: 10);
     }
+
+    &:active:enabled {
+      transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(0.95) scaleY(0.95)
+    }
+
   }
 
   .btn-text-#{"" + $name} {
     color: $color;
     font-weight: bold;
 
-    &:hover {
+    &:hover:enabled {
       background-color: lighten($color, $amount: 25);
-
     }
 
-    &:active {
-      background-color: lighten($color, $amount: 23);
-      ;
+    &:disabled {
+      color: lighten($color, $amount: 10);
     }
+
+    &:active:enabled {
+      transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(0.95) scaleY(0.95)
+    }
+
+
+
   }
 
 }

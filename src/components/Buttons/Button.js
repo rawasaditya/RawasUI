@@ -1,15 +1,27 @@
-import React from 'react'
-import { generateBtnClass, generateRoundedClass } from './buttonsUtils'
-import styles from '../../public/stylesheets/button.module.css' 
-const Buttons = ({ children, color,variant, rounded, className,...props }) => {
-    const colorClass = generateBtnClass(color, variant);
-    const roundedClass = generateRoundedClass(rounded);
-    return (
-        <button
-            className={[styles.btn, colorClass,roundedClass, className].join(" ")}
-            {...props}
-        >{children}</button>
-    )
-}
+import React from "react";
+import { generateBtnClass, generateRoundedClass } from "./buttonsUtils";
+import Spinner from "../Spinner/Spinner";
+const Buttons = ({
+  children,
+  color,
+  variant,
+  rounded,
+  className,
+  loading,
+  ...props
+}) => {
+  const colorClass = generateBtnClass(color, variant);
+  const roundedClass = generateRoundedClass(rounded);
+  return (
+    <button
+      className={["btn", colorClass, roundedClass, className].join(" ")}
+      disabled={loading}
+      {...props}
+    >
+      {loading && <Spinner color={color} />}
+      {children}
+    </button>
+  );
+};
 
-export default Buttons
+export default Buttons;

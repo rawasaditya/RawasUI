@@ -1,29 +1,13 @@
-import styles from '../../public/stylesheets/button.module.css'
-
-const generateBtnClass = (color, variant="text") => {
-    const cssClass = `btn-${variant}-${color}`;
-    const cssClasses = Object.keys(styles);
-    if(cssClasses.includes(cssClass)){
-        return styles[cssClass]
-    }else{
-        return ""
-    }
-}
+const generateBtnClass = (color, variant = "text") => {
+  const cssClass = `btn-${variant}-${color}`;
+  return cssClass;
+};
 const generateRoundedClass = (isRounded) => {
-    if(isRounded){
-        
-        const cssClass = `rounded-pill`;
-        const cssClasses = Object.keys(styles);
-        if(cssClasses.includes(cssClass)){
-            return styles[cssClass]
-        }else{
-            return ""
-        }
-    }
-}
+  if (isRounded) {
+    const cssClass = `rounded-pill`;
+    return cssClass;
+  }
+  return "";
+};
 
-
-export {
-    generateBtnClass,
-    generateRoundedClass
-}
+export { generateBtnClass, generateRoundedClass };

@@ -1,103 +1,60 @@
-import styles from '../public/stylesheets/button.module.css'
-import Buttons from '../components/Buttons/Button';
-
-
-
-
-
+import Buttons from "../components/Buttons/Button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 
-
 export default {
-  title: 'Example/Buttons',
+  title: "Components/Buttons",
   component: Buttons,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   argTypes: {
     color: {
-      options: [
-        'primary',
-        'secondary',
-        'success',
-        'info',
-        'warning',
-        'danger',
-        'light',
-        'dark'
-      ],
-      control: { type: 'select', defaultValue: 'megenta' },
+      options: ["primary", "secondary", "success", "dark"],
+      control: { type: "select", defaultValue: "primary" },
     },
-    variant:{
-      options: [
-        'contain',
-        'text',
-        'outline',
-      ],
-      control: { type: 'select', defaultValue: 'contained' },
+    variant: {
+      options: ["contain", "text", "outline"],
+      control: { type: "select", selected: "contain" },
     },
     className: {
-      type: "string"
+      type: "string",
     },
-    rounded:{
-      type:"boolean",
-    }
+    rounded: {
+      type: "boolean",
+    },
+    loading: {
+      type: "boolean",
+    },
   },
 };
 
 export const Primary = {
   args: {
-    children: 'Button',
-    color: "primary"
+    children: "Button",
+    color: "primary",
+    variant: "contain",
   },
 };
 
 export const Secondary = {
   args: {
-    children: 'Button',
-    color: "secondary"
+    children: "Button",
+    color: "secondary",
+    variant: "contain",
   },
 };
 
 export const Success = {
   args: {
-    children: 'Button',
-    color: "success"
-  },
-};
-
-export const Info = {
-  args: {
-    children: 'Button',
-    color: "info"
-  },
-};
-
-
-export const Warning = {
-  args: {
-    children: 'Button',
-    color: "warning"
-  },
-};
-
-
-export const Danger = {
-  args: {
-    children: 'Button',
-    color: "danger"
-  },
-};
-
-export const Light = {
-  args: {
-    children: 'Button',
-    color: "light"
+    children: "Button",
+    color: "success",
+    variant: "contain",
   },
 };
 
 export const Dark = {
   args: {
-    children: 'Button',
-    color: "dark"
+    children: "Button",
+    color: "dark",
+    variant: "contain",
   },
 };
