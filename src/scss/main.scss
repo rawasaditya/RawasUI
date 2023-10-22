@@ -1,6 +1,7 @@
 @import "utils/radius";
-@import "button";
-@import "spinner";
+@import "components/button";
+@import "components/spinner";
+@import "components/textField.scss";
 
 body {
     margin: 0;
