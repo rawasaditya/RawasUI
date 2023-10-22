@@ -1,8 +1,8 @@
-import TextField from "../components/TextField/TextField";
+import TextFieldComponent from "../components/TextField/TextField";
 
 export default {
   title: "Components/TextField",
-  component: TextField,
+  component: TextFieldComponent,
   tags: ["autodocs"],
   argTypes: {
     size: {
