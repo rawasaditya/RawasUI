@@ -27,4 +27,16 @@
   fill: #153850;
 }
 
+.spinner-muted {
+  fill: #E0E0E0;
+}
+
+.spinner-color {
+  fill: #75787D;
+}
+
+.spinner-primeBlue {
+  fill: #975AFF;
+}
+
 /*# sourceMappingURL=spinner.css.map */

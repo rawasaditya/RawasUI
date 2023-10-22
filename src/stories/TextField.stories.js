@@ -5,31 +5,30 @@ export default {
   component: TextField,
   tags: ["autodocs"],
   argTypes: {
-    variants: {
-      options: ["outlined", "filled", "standard"],
-      control: { type: "select", defaultValue: "primary" },
+    size: {
+      options: [null, "sm", "lg"],
+      control: { type: "select", selected: "contain" },
     },
-
     className: {
       type: "string",
+      default: "w-half",
+    },
+    placeholder: {
+      type: "string",
+    },
+    disabled: {
+      type: "boolean",
+    },
+    rounded: {
+      type: "boolean",
     },
   },
 };
 
-export const Outlined = {
+export const TextField = {
   args: {
     variants: "outlined",
-  },
-};
-
-export const Filled = {
-  args: {
-    variants: "filled",
-  },
-};
-
-export const Standard = {
-  args: {
-    variants: "standard",
+    className: "w-half",
+    placeholder: "Start typing here",
   },
 };
