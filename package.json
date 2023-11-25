@@ -9,8 +9,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "build": "rollup -c",
     "sass": "sass --watch src/scss:src/public/stylesheets",
-    "build": "rollup -c"
+    "start": "nodemon -e scss -x \"npm run build\" "
   },
   "repository": {
     "type": "git",
@@ -50,6 +51,7 @@
   },
   "dependencies": {
     "@rollup/plugin-sucrase": "^5.0.1",
+    "nodemon": "^3.0.1",
     "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-generate-package-json": "^3.2.0",
     "rollup-plugin-import-css": "^3.2.1"

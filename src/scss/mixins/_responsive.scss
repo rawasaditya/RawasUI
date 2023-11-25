@@ -1,0 +1,20 @@
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+@mixin media($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $min-width: map-get($breakpoints, $breakpoint);
+
+        @media (min-width: $min-width) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Unknown breakpoint: #{$breakpoint}. Check your breakpoints map.";
+    }
+}
