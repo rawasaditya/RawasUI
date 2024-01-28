@@ -1,4 +1,4 @@
-import Box from "../components/Box/Box";
+import Box from "../components/Layout/Box";
 import Flex from "../components/Layout/Flex";
 export default {
   title: "Layout/Flex",

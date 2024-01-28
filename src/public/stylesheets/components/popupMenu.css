@@ -1,0 +1,25 @@
+/* PopupMenuButton.module.css */
+.popupMenu {
+  position: relative;
+  display: inline-block;
+}
+.popupMenu span {
+  border: none;
+  cursor: pointer;
+  margin: 0;
+}
+.popupMenu .menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  min-width: 120px;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  padding: 8px 16px;
+}
+.popupMenu .menu > * {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=popupMenu.css.map */

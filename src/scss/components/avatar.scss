@@ -1,0 +1,14 @@
+@import "../utils/variables";
+
+
+.avatar {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@each $size, $dimension in $avatar-sizes {
+    .avatar-#{$size} {
+        width: $dimension;
+        height: $dimension;
+    }
+}

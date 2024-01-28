@@ -9,13 +9,20 @@ const Buttons = ({
   rounded,
   className,
   loading,
+  size,
   ...props
 }) => {
   const colorClass = generateBtnClass(color, variant);
   const roundedClass = generateRoundedClass(rounded);
   return (
     <button
-      className={["btn", colorClass, roundedClass, className].join(" ")}
+      className={[
+        "btn",
+        colorClass,
+        roundedClass,
+        `btn-${size}`,
+        className,
+      ].join(" ")}
       disabled={loading}
       {...props}
     >

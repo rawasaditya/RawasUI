@@ -27,6 +27,16 @@
   min-width: 7rem;
 }
 
+.btn-sm {
+  font-size: 0.8rem;
+  padding: 0.25rem .5rem;
+}
+
+.btn-lg {
+  font-size: 1.5rem;
+  padding: 0.8rem 1.5rem;
+}
+
 @each $name,
 $color in $colors {
   .btn-contain-#{"" + $name} {

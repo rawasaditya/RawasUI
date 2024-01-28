@@ -11,8 +11,12 @@ export default {
       options: ["primary", "secondary", "success", "dark"],
       control: { type: "select", defaultValue: "primary" },
     },
-    size: {
+    variant: {
       options: ["contain", "text", "outline"],
+      control: { type: "select", selected: "contain" },
+    },
+    size: {
+      options: ["", "sm", "lg"],
       control: { type: "select", selected: "contain" },
     },
     className: {

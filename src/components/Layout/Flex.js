@@ -1,6 +1,15 @@
 import React from "react";
 
-const Flex = ({ direction, align, justify, wrap, gap, children }) => {
+const Flex = ({
+  direction,
+  align,
+  justify,
+  wrap,
+  gap,
+  children,
+  className,
+  ...props
+}) => {
   const flexStyles = {
     display: "flex",
     flexDirection: direction,
@@ -10,7 +19,11 @@ const Flex = ({ direction, align, justify, wrap, gap, children }) => {
     gap: gap ? `${gap}` : "0",
   };
 
-  return <div style={flexStyles}>{children}</div>;
+  return (
+    <div style={flexStyles} className={[className].join(" ")}>
+      {children}
+    </div>
+  );
 };
 
 export default Flex;

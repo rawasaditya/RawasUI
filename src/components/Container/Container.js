@@ -8,6 +8,7 @@ const Container = ({
   color,
   children,
   style,
+  className,
   ...props
 }) => {
   const containerStyle = {
@@ -21,7 +22,9 @@ const Container = ({
 
   return (
     <div
-      className={["container", fluid ? "container-fluid" : ""].join(" ")}
+      className={["container", fluid ? "container-fluid" : "", className].join(
+        " "
+      )}
       style={containerStyle}
       {...props}
     >

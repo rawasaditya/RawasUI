@@ -51,6 +51,16 @@
   min-width: 7rem;
 }
 
+.btn-sm {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.btn-lg {
+  font-size: 1.5rem;
+  padding: 0.8rem 1.5rem;
+}
+
 .btn-contain-primary {
   background-color: #FE6B68;
   border-color: #FE6B68;

@@ -1,0 +1,61 @@
+// _margins.scss
+
+// Margin utility classes
+@mixin margin($value) {
+    margin: $value;
+}
+
+@mixin margin-top($value) {
+    margin-top: $value;
+}
+
+@mixin margin-right($value) {
+    margin-right: $value;
+}
+
+@mixin margin-bottom($value) {
+    margin-bottom: $value;
+}
+
+@mixin margin-left($value) {
+    margin-left: $value;
+}
+
+@mixin negative-margin($value) {
+    margin: -$value;
+}
+
+@mixin negative-margin-top($value) {
+    margin-top: -$value;
+}
+
+@mixin negative-margin-right($value) {
+    margin-right: -$value;
+}
+
+@mixin negative-margin-bottom($value) {
+    margin-bottom: -$value;
+}
+
+@mixin negative-margin-left($value) {
+    margin-left: -$value;
+}
+
+@mixin margin-auto() {
+    margin: auto;
+}
+
+
+.element {
+    @include margin(20px); // Margin on all sides
+    @include margin-top(10px); // Margin-top
+    @include margin-right(15px); // Margin-right
+    @include margin-bottom(10px); // Margin-bottom
+    @include margin-left(15px); // Margin-left
+    @include negative-margin(10px); // Negative margin
+    @include negative-margin-top(5px); // Negative margin-top
+    @include negative-margin-right(5px); // Negative margin-right
+    @include negative-margin-bottom(5px); // Negative margin-bottom
+    @include negative-margin-left(5px); // Negative margin-left
+    @include margin-auto(); // Auto margin
+}
