@@ -5,9 +5,7 @@ import { Image } from "../components/Image";
 
 export default {
   title: "Components/Image",
-  parameters: {
-    tags: ["autodocs"],
-  },
+  tags: ["autodocs"],
   argTypes: {
     align: {
       control: { type: "select", options: ["left", "center", "right"] },

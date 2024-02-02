@@ -17,6 +17,8 @@ const Image = ({
   src,
   srcSet,
   alt,
+  className,
+  ...props
 }) => {
   const [imageSrc, setImageSrc] = useState(src);
   const handleError = (event) => {
@@ -53,6 +55,8 @@ const Image = ({
         style={{ objectFit: fit, objectPosition: align }} // Apply fit and align styles
         width={htmlWidth}
         height={htmlHeight}
+        className={className}
+        {...props}
       />
     );
   };
