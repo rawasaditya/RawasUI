@@ -1,0 +1,23 @@
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.toast.show {
+  opacity: 1;
+}
+
+.toast.hide {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=toast.css.map */

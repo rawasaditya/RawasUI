@@ -8,6 +8,7 @@ const Flex = ({
   gap,
   children,
   className,
+  style,
   ...props
 }) => {
   const flexStyles = {
@@ -17,6 +18,7 @@ const Flex = ({
     justifyContent: justify,
     flexWrap: wrap,
     gap: gap ? `${gap}` : "0",
+    ...style,
   };
 
   return (
