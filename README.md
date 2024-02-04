@@ -12,6 +12,7 @@ To get started with RawasUI, follow these steps:
 2. **Install dependencies** npm ci
 3. **Watch and compile SCSS files** npm run scss
 4. **View components using Storybook**  npm run storybook
+5. **Build component library** npm run build
 
 # Contributing to RawasUI
 
@@ -19,7 +20,7 @@ We welcome contributions from the community to help improve RawasUI. If you'd li
 
 ## Reporting Issues
 
-If you find a bug, have a suggestion, or want to request a feature, please [open an issue](link_to_issues) on our GitHub repository. Make sure to include as much detail as possible.
+If you find a bug, have a suggestion, or want to request a feature, please [open an issue](https://github.com/rawasaditya/RawasUI/issues) on our GitHub repository. Make sure to include as much detail as possible.
 
 ## Making Contributions
 
